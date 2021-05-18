@@ -1,5 +1,7 @@
 const question = document.getElementById('question');
 const choices = Array.from(document.getElementsByClassName('choice-text'));
+const questionCounterText = document.getElementById('questionCounter');
+const scoreText = document.getElementById('score');
 //console.log(choices);
 
 let currentQuestion = {};
@@ -45,7 +47,7 @@ startGame = () => {
     availableQuestions = [...questions];
     //console.log(availableQuestions);
     getNewQuestion();
-}
+};
 
 getNewQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
@@ -53,6 +55,8 @@ getNewQuestion = () => {
     }
 
     questionCounter++;
+    questionCounterText.innerText = `${questionCounter}/${MAX_QUESTIONS}`;
+
     const questionIndex = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerText = currentQuestion.question;
@@ -63,13 +67,13 @@ getNewQuestion = () => {
     });
 
     availableQuestions.splice(questionIndex, 1); /* Takes the current question out of the array */
-
     acceptingAnswers = true;
-}
+};
 
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return;
+        
         acceptingAnswers = false;
 
         const selectedChoice = e.target;
@@ -80,17 +84,27 @@ choices.forEach(choice => {
             classToApply = 'correct';
         } */
 
-        const classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-        console.log(classToApply);
+        const classToApply = 
+        selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+        //console.log(classToApply);
+
+        if (classToApply === "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
 
         //console.log(selectedAnswer == currentQuestion.answer); /* Data type isn't the same, so === fails */
         selectedChoice.parentElement.classList.add(classToApply);
+        
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNewQuestion();
-        }, 1000)
-        
-    })
-})
+        }, 1000);        
+    });
+});
+
+incrementScore = num => {
+    score += num;
+    scoreText.innerText = score;
+};
 
 startGame();
