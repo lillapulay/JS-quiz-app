@@ -24,3 +24,11 @@
     padding: 1.5rem;
     width: 100%; /* So it's clickable on the whole button */
 }
+
+.correct {
+    background-color: #28a745;
+}
+
+.incorrect {
+    background-color: #dc3545;
+}
