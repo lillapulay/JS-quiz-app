@@ -48,6 +48,7 @@ h3 {
     align-items: center; /* Vertical */
     max-width: 80rem;
     margin: 0 auto;
+    padding: 2rem;
 }
 
 /* Children of container */
