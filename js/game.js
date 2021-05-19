@@ -18,7 +18,7 @@ fetch("../questions.json")
     }).then(loadedQuestions => {
         console.log(loadedQuestions);
         questions = loadedQuestions;
-        startGame();
+        startGame(); // We want to call this function only after the data has been loaded
     }).catch(err => {
         console.log(err);
     });
