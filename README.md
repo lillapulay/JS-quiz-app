@@ -1,6 +1,7 @@
 # JavaScript Quiz App
 
 Quiz application fetching data from the [Open Trivia Database API](https://opentdb.com/). 
+
 The user can start a game, answer 10 questions and save their score to the localStorage.
 
 ### Notes
