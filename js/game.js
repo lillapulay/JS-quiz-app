@@ -5,7 +5,6 @@ const scoreText = document.getElementById('score');
 const progressBarFull = document.getElementById('progressBarFull');
 const loader = document.getElementById('loader');
 const game = document.getElementById('game');
-//console.log(choices);
 
 let currentQuestion = {};
 let acceptingAnswers = false;
@@ -18,7 +17,6 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=mul
     .then(res => {
         return res.json();
     }).then(loadedQuestions => {
-        console.log(loadedQuestions);
         questions = loadedQuestions.results.map(loadedQuestion => {
             const formattedQuestion = {
                 question: loadedQuestion.question
@@ -45,8 +43,8 @@ startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
-    //console.log(availableQuestions);
     getNewQuestion();
+
     /* Don't show the game unti lwe got the questions */
     game.classList.remove("hidden");
     loader.classList.add("hidden");
@@ -93,13 +91,11 @@ choices.forEach(choice => {
 
         const classToApply = 
         selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
-        //console.log(classToApply);
 
         if (classToApply === "correct") {
             incrementScore(CORRECT_BONUS);
         }
 
-        //console.log(selectedAnswer == currentQuestion.answer); /* Data type isn't the same, so === fails */
         selectedChoice.parentElement.classList.add(classToApply);
         
         setTimeout(() => {
