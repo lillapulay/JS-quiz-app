@@ -43,10 +43,10 @@ The user can start a game, answer 10 questions and save their score to the local
     - Spinning loader using CSS and JavaScript
 
 ### Planned updates
-- (done) End screen - change text
-- (done) Fetched data - fix HTML issues
-- Highlight correct answer upon chosing a wrong one
-- Quit button
+- [x] End screen - change text
+- [x] Fetched data - fix HTML issues
+- [ ] Highlight correct answer upon chosing a wrong one
+- [ ] Quit button
 
 ### Credits
 - [Tutorial source](https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/)
