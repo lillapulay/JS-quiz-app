@@ -4,6 +4,8 @@ Quiz application fetching data from the [Open Trivia Database API](https://opent
 
 The user can start a game, answer 10 questions and save their score to the localStorage.
 
+Visit the [live demo by clicking here](https://lillapulay.github.io/JS-quiz-app/).
+
 ### Notes
 (<em>Some reminders for myself & what I learned/practiced/refreshed while building this app</em>)
 - <em>!+Tab</em> creates an HTML template (VS Code)
