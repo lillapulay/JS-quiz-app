@@ -1,10 +1,30 @@
-# JavaScript Quiz App
+<h1 align="center"> JavaScript Quiz App </h1>
+
+<image align="center" alt ="Quiz app" src="screenshots/quiz1.PNG">
 
 Quiz application fetching data from the [Open Trivia Database API](https://opentdb.com/). 
 
 The user can start a game, answer 10 questions and save their score to the localStorage.
 
 Visit the [live demo by clicking here](https://lillapulay.github.io/JS-quiz-app/).
+    
+
+    
+
+### Features:
+- Color indication of whether the answer given is correct or false
+    
+<image align="left" height="250" alt="Answer right" src="screenshots/quiz3.PNG">   
+<image height="250" alt="Answer wrong" src="screenshots/quiz4.PNG">
+    
+    
+- Save score in the localStorage (and get data from there as well)
+    
+<image align="left" height="250" alt="Final screen" src="screenshots/quiz2.PNG">
+<image height="250" alt="Highscores" src="screenshots/quiz5.PNG">
+    
+    - Progress bar using CSS and JavaScript    
+    - Spinning loader using CSS and JavaScript
 
 ### Notes
 (<em>Some reminders for myself & what I learned/practiced/refreshed while building this app</em>)
@@ -39,16 +59,13 @@ Visit the [live demo by clicking here](https://lillapulay.github.io/JS-quiz-app/
     - `.then()` promises
     - `.catch()` error handling
 - Basic CSS animation, flexbox
-- Features:
-    - Save score in the localStorage (and get data from there as well)
-    - Progress bar using CSS and JavaScript
-    - Spinning loader using CSS and JavaScript
 
 ### Planned updates
 - [x] End screen - change text
 - [x] Fetched data - fix HTML issues
 - [ ] Highlight correct answer upon chosing a wrong one
 - [ ] Quit button
+- [ ] Favicon
 
 ### Credits
 - [Tutorial source](https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/)
